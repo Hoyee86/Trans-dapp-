@@ -2,8 +2,21 @@ import React from "react";
 import { SiEthereum } from  "react-icons/si"
 import { BsInfoCircle } from "react-icons/bs"
 
+
 const commonStyles =
   "min-h-[70px] sm:px-0 px-2 sm:-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-white";
+
+
+  const Input = ({placeholder, name, type, value, handleChange}) => {
+        <input
+          placeholder={placeholder}
+          type={type}
+          step="0.0001"
+          value={value}
+          // onChange={(e) => handleChange(e, name)}
+          className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorpism"
+        />
+  }
 
 const Welcome = () => {
   return (
@@ -34,7 +47,7 @@ const Welcome = () => {
           </div>
         </div>
 
-        <div>
+        
           <div className="flex flex-col flex-1 items-start justify-start w-full mf:mt-0 mt-10">
               <div className="p-3 justify-end items-start flex-col rounded-xl h-40 sm:w-72 w-full my-5 eth-card white-glassmorpism">
                 <div className="flex justify-between flex-col rounded-xl w-full h-full">
@@ -44,13 +57,28 @@ const Welcome = () => {
                   </div>
                   <BsInfoCircle fontSize={17} color="#fff"/>
                   </div>
+
+                 <div>
+                 <p className="text-black font-bold text-lg mb-">
+                     0x534fd........E8428
+                  </p>
+                   <p className="text-white font-semibold text-lg mt-1">
+                     Ethereum
+                   </p>
+                 </div>
                 </div>
               </div>
-              <p>
-                
-              </p>
+
+              <div>
+                 <Input
+                   placeholder='Wallet Address'
+                   name='Address Token'
+                   type='text'
+                  //  handleChange={handleChange}
+                 />
+              </div>
+
           </div>
-        </div>
       </div>
     </div>
   );
