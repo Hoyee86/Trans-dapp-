@@ -1,4 +1,4 @@
-import { NavBar, Welcome } from "../components"
+import { NavBar, Welcome, Services, Footer } from "../components"
 import React from 'react';
 
 const page = () => {
@@ -8,8 +8,10 @@ const page = () => {
        <div className="gradient-bg-welcome">
          <NavBar />
          <Welcome/>
+         <Services/>
+         <Footer/>
        </div>
-
+        
     </div>
   )
 }
